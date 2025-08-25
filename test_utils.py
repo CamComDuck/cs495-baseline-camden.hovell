@@ -18,5 +18,11 @@ class TestStringMethods(unittest.TestCase):
         result = utils.UniqueChars.first_unique_char(test_string)
         self.assertEqual(result, -1)
 
+    def test_failing(self):
+        test_string = 'aaaaa'
+        result = utils.UniqueChars.first_unique_char(test_string)
+        self.assertEqual(result, 1)
+
+
 if __name__ == '__main__':
     unittest.main()
